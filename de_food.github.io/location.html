@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Где мы находимся - DE Food</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+            cursor: pointer; /* Изменяем курсор при наведении, чтобы показать, что карта кликабельна */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">DE Food</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="location">
+            <h2>Мы находимся здесь!</h2>
+            <div id="map"></div>
+            <p>Приходите к нам по адресу: ул. Югорская, 5, Сургут</p>
+            <p>Часы работы: 10-22 часов</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DE Food</p>
+    </footer>
+
+    <script>
+        function initMap() {
+            const surgutYugorskaya5 = { lat: 61.254040, lng: 73.397232 }; // Координаты для Югорской, 5
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: surgutYugorskaya5,
+                zoom: 15,
+                disableDefaultUI: true // Отключаем стандартный UI карты, чтобы не мешал переходу
+            });
+
+            const marker = new google.maps.Marker({
+                position: surgutYugorskaya5,
+                map: map,
+                title: "DE Food (Предположительное местоположение)",
+            });
+
+            // Добавляем обработчик клика на карту
+            document.getElementById('map').addEventListener('click', function() {
+                window.open('https://www.google.com/maps/search/?api=1&query=ул.+Югорская+5,+Сургут', '_blank');
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=[ВАШ_КЛЮЧ_API]&callback=initMap" async defer></script>
+</body>
+</html>

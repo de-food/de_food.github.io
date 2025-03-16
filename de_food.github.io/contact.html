@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Фастфуд "DE-food"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">DE Food</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="location.html">Где мы находимся</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Помощник: <a href="https://vk.com/anti_rock_star" target="_blank">Уткин Елесей</a></p>
+            <p>Создатель: <a href="https://vk.com/minimenites" target="_blank">Минионов Данил</a></p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DE Food</p>
+    </footer>
+</body>
+</html>
+
+<section id="contact-form">
+  <h2>Напишите нам</h2>
+  <form action="process_form.php" method="post">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Сообщение:</label>
+    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+    <button type="submit">Отправить</button>
+  </form>
+</section>

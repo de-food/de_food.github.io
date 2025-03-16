@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бургер "Классик" - DE Food</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">DE Food</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="product-details">
+            <h2>Бургер "Классик"</h2>
+            <img src="images/burger-classic.jpg" alt="Бургер Классик">
+            <p>Сочная говяжья котлета, свежие овощи, фирменный соус на булочке бриошь.</p>
+            <h3>Состав:</h3>
+            <ul>
+                <li>Говяжья котлета</li>
+                <li>Булочка бриошь</li>
+                <li>Сыр чеддер</li>
+                <li>Помидор</li>
+                <li>Листья салата</li>
+                <li>Маринованные огурцы</li>
+                <li>Фирменный соус</li>
+            </ul>
+            <h3>Калорийность:</h3>
+            <p>650 ккал</p>
+            <span class="price">150 руб.</span>
+             <button class="add-to-cart" data-name="Бургер Классик" data-price="150">В корзину</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DE Food</p>
+    </footer>
+</body>
+</html>
+<!-- burger-classic.html (или в другом месте, где вы хотите отображать корзину) -->
+<section id="cart">
+    <h2>Корзина</h2>
+    <ul id="cart-items">
+        <!-- Здесь будут отображаться товары -->
+    </ul>
+    <p>Итого: <span id="cart-total">0</span> руб.</p>
+</section>
+<!-- burger-classic.html (или в другом месте, где вы хотите отображать корзину) -->
+<section id="cart">
+    <h2>Корзина</h2>
+    <ul id="cart-items">
+        <!-- Здесь будут отображаться товары -->
+    </ul>
+    <p>Итого: <span id="cart-total">0</span> руб.</p>
+</section>
+<!-- burger-classic.html -->
+<button class="add-to-cart" data-name="Бургер Классик" data-price="150" onclick="addItemToCart(this.dataset.name, this.dataset.price)">В корзину</button>
+
